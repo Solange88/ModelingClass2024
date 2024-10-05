@@ -1,6 +1,6 @@
 //Maya ASCII 2025ff03 scene
 //Name: Challenge06_Whitebox_Boat.ma
-//Last modified: Sat, Oct 05, 2024 03:12:54 PM
+//Last modified: Sat, Oct 05, 2024 03:17:39 PM
 //Codeset: 1252
 requires maya "2025ff03";
 requires "stereoCamera" "10.0";
@@ -13,7 +13,7 @@ fileInfo "product" "Maya 2025";
 fileInfo "version" "2025";
 fileInfo "cutIdentifier" "202407121012-8ed02f4c99";
 fileInfo "osv" "Windows 11 Home v2009 (Build: 22631)";
-fileInfo "UUID" "8F997B29-4E17-0C36-7A84-A7AC1170E726";
+fileInfo "UUID" "446FCE2E-45E8-24EF-BDE3-C7AFF94C69A2";
 createNode transform -s -n "persp";
 	rename -uid "DCCDF682-482D-63E2-259B-EEA2C3CDB195";
 	setAttr ".v" no;
@@ -65,15 +65,15 @@ createNode camera -s -n "frontShape" -p "front";
 createNode transform -s -n "side";
 	rename -uid "46AA288D-4765-E711-49F7-32BE18273678";
 	setAttr ".v" no;
-	setAttr ".t" -type "double3" -6.2862341592014399 7.2324931332859013 11.290336868692407 ;
-	setAttr ".r" -type "double3" -14.999999999999526 -388.80000000008141 4.536874409805366e-16 ;
+	setAttr ".t" -type "double3" 13.86887176521936 5.6563393743725605 11.646034794387926 ;
+	setAttr ".r" -type "double3" -7.2000000000135467 -315.20000000007639 0 ;
 	setAttr ".rp" -type "double3" -1.5858334523330531e-18 1.0061014881068475e-16 0 ;
 	setAttr ".rpt" -type "double3" -6.7690845241204413e-15 -1.0061014881068475e-16 -3.5117742047674483e-14 ;
 createNode camera -s -n "sideShape" -p "side";
 	rename -uid "CF8DE041-49DE-4007-2B36-0684F7770964";
 	setAttr -k off ".v" no;
 	setAttr ".rnd" no;
-	setAttr ".coi" 15.163436221887444;
+	setAttr ".coi" 18.737506866440881;
 	setAttr ".ow" 12.861088507297751;
 	setAttr ".imn" -type "string" "side";
 	setAttr ".den" -type "string" "side_depth";
@@ -14984,11 +14984,11 @@ createNode mesh -n "pPlaneShape2" -p "|PalmLeaves_WB|group2|pPlane2";
 	setAttr ".cvd" -type "dataPolyComponent" Index_Data Vertex 0 ;
 	setAttr ".pd[0]" -type "dataPolyComponent" Index_Data UV 0 ;
 	setAttr ".hfd" -type "dataPolyComponent" Index_Data Face 0 ;
-createNode transform -n "pCube10";
+createNode transform -n "Plant";
 	rename -uid "6EBA5FBD-4591-9CC2-9AD8-C8A0F7F9E0D7";
 	setAttr ".t" -type "double3" 0.76989371290640074 3.3079070498641912 -1.5447120825789828 ;
 	setAttr ".s" -type "double3" 0.25407278479566836 0.25407278479566836 0.25407278479566836 ;
-createNode mesh -n "pCubeShape10" -p "pCube10";
+createNode mesh -n "PlantShape" -p "Plant";
 	rename -uid "0B668B1B-4FCF-E64E-68D4-1B8B3FDBE928";
 	setAttr -k off ".v";
 	setAttr ".vir" yes;
@@ -14999,20 +14999,20 @@ createNode mesh -n "pCubeShape10" -p "pCube10";
 	setAttr ".covm[0]"  0 1 1;
 	setAttr ".cdvm[0]"  0 1 1;
 createNode lightLinker -s -n "lightLinker1";
-	rename -uid "82ECB7EB-440F-635B-6C0E-BC818F0DC80C";
+	rename -uid "E90BF2BE-4475-2F8C-BF6D-41939DCB6FB4";
 	setAttr -s 18 ".lnk";
 	setAttr -s 18 ".slnk";
 createNode shapeEditorManager -n "shapeEditorManager";
-	rename -uid "4D92DF08-4AD1-01C0-6ED1-8D990F914D12";
+	rename -uid "CD1EDBF6-4067-CCCC-FFAB-57BCCC58156B";
 createNode poseInterpolatorManager -n "poseInterpolatorManager";
-	rename -uid "653D1B1E-439A-4CFB-FA0E-0ABC34453CE6";
+	rename -uid "071DF92E-43C9-0ED3-62F0-7B936AFCFAB7";
 createNode displayLayerManager -n "layerManager";
-	rename -uid "0846A32A-4DB8-71BC-01EE-0EAE1E6AD6AE";
+	rename -uid "C6BB8EC4-4947-4BE2-413C-A5A676BAB68F";
 createNode displayLayer -n "defaultLayer";
 	rename -uid "4DB2A462-4900-107B-165C-7B83BF946395";
 	setAttr ".ufem" -type "stringArray" 0  ;
 createNode renderLayerManager -n "renderLayerManager";
-	rename -uid "7DC71CE2-4D32-CA70-0CD7-289A5245D9FD";
+	rename -uid "19BEF8AC-4B2F-CF7A-514B-049A7141634D";
 createNode renderLayer -n "defaultRenderLayer";
 	rename -uid "8D2BFB27-414B-0A98-74EA-368C5BF6F35D";
 	setAttr ".g" yes;
@@ -16201,7 +16201,7 @@ connectAttr "polyCube9.out" "pCubeShape6.i";
 connectAttr "polyCylinder9.out" "Buoy_WBShape.i";
 connectAttr "polyExtrudeFace2.out" "|PalmLeaves_WB|group1|pPlane2|pPlaneShape2.i"
 		;
-connectAttr "polyCube11.out" "pCubeShape10.i";
+connectAttr "polyCube11.out" "PlantShape.i";
 relationship "link" ":lightLinker1" ":initialShadingGroup.message" ":defaultLightSet.message";
 relationship "link" ":lightLinker1" ":initialParticleSE.message" ":defaultLightSet.message";
 relationship "link" ":lightLinker1" "lambert2SG.message" ":defaultLightSet.message";
@@ -16407,7 +16407,7 @@ connectAttr "|PalmLeaves_WB|group1|pPlane6|pPlaneShape6.iog" "lambert10SG.dsm" -
 connectAttr "|PalmLeaves_WB|group1|pPlane8|pPlaneShape8.iog" "lambert10SG.dsm" -na
 		;
 connectAttr "pPlaneShape9.iog" "lambert10SG.dsm" -na;
-connectAttr "pCubeShape10.iog" "lambert10SG.dsm" -na;
+connectAttr "PlantShape.iog" "lambert10SG.dsm" -na;
 connectAttr "lambert10SG.msg" "materialInfo15.sg";
 connectAttr "Leaves.msg" "materialInfo15.m";
 connectAttr "polyBridgeEdge1.out" "polySplitRing6.ip";
