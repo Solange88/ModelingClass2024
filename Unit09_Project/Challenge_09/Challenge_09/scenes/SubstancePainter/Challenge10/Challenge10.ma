@@ -1,6 +1,6 @@
 //Maya ASCII 2025ff03 scene
-//Name: Challenge09.ma
-//Last modified: Thu, Nov 07, 2024 01:14:21 PM
+//Name: Challenge10.ma
+//Last modified: Thu, Nov 07, 2024 01:15:17 PM
 //Codeset: 1252
 requires maya "2025ff03";
 requires -nodeType "materialxStack" -nodeType "MaterialXSurfaceShader" -dataType "MxDocumentStackData"
@@ -16,7 +16,7 @@ fileInfo "product" "Maya 2025";
 fileInfo "version" "2025";
 fileInfo "cutIdentifier" "202407121012-8ed02f4c99";
 fileInfo "osv" "Windows 11 Home v2009 (Build: 22631)";
-fileInfo "UUID" "30C654F8-49CA-E42A-3236-EDB26B34F218";
+fileInfo "UUID" "5540938E-4637-DEEA-6C27-DA9A08202AAB";
 createNode transform -s -n "persp";
 	rename -uid "DCCDF682-482D-63E2-259B-EEA2C3CDB195";
 	setAttr ".v" no;
@@ -197487,4 +197487,4 @@ connectAttr "pointLight19.iog" ":defaultLightSet.dsm" -na;
 connectAttr "pointLight20.iog" ":defaultLightSet.dsm" -na;
 connectAttr "ambientLight1.iog" ":defaultLightSet.dsm" -na;
 connectAttr "areaLight20.iog" ":defaultLightSet.dsm" -na;
-// End of Challenge09.ma
+// End of Challenge10.ma
