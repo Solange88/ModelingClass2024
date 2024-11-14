@@ -65,3 +65,7 @@ crashlytics-build.properties
 *.painter_lock
 
 *.spp
+
+Unit09_Project/Challenge_09/Challenge_09/sourceimages/BoatScenePainter_Black_BaseColor.png
+
+*.swatches
