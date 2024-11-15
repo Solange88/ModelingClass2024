@@ -1,6 +1,6 @@
 //Maya ASCII 2025ff03 scene
-//Name: Lab_11.ma
-//Last modified: Fri, Nov 15, 2024 02:30:05 PM
+//Name: Challenge_11.ma
+//Last modified: Fri, Nov 15, 2024 02:31:41 PM
 //Codeset: 1252
 requires maya "2025ff03";
 requires "stereoCamera" "10.0";
@@ -12,7 +12,7 @@ fileInfo "product" "Maya 2025";
 fileInfo "version" "2025";
 fileInfo "cutIdentifier" "202407121012-8ed02f4c99";
 fileInfo "osv" "Windows 11 Home v2009 (Build: 22631)";
-fileInfo "UUID" "6F9E5B0A-4F20-89D4-A788-DE8EEAB59EDB";
+fileInfo "UUID" "F1DE6021-4FED-D935-DEE5-38A932AFC3BB";
 createNode transform -s -n "persp";
 	rename -uid "F5719CF3-4FA9-D194-2B7E-96A5EDF7B18C";
 	setAttr ".v" no;
@@ -40113,7 +40113,7 @@ createNode polyTweak -n "polyTweak1";
 		 -0.0049595279 -0.010631636 0.0016154342 -0.0009923178 -0.010631636 0.0047105723 0.0009923178
 		 -0.010631636 0.0047105723;
 createNode nodeGraphEditorInfo -n "hyperShadePrimaryNodeEditorSavedTabsInfo";
-	rename -uid "568AADE7-4B9D-AA96-297C-FC811B19D29C";
+	rename -uid "CAE08957-4C6F-4472-DFD3-4380FC668CCD";
 	setAttr ".tgi[0].tn" -type "string" "Untitled_1";
 	setAttr ".tgi[0].vl" -type "double2" -622.61902287839052 -476.19045726836765 ;
 	setAttr ".tgi[0].vh" -type "double2" 592.85711929911758 498.80950398861495 ;
@@ -40561,4 +40561,4 @@ connectAttr "groupId2.msg" ":initialShadingGroup.gn" -na;
 connectAttr "groupId7.msg" ":initialShadingGroup.gn" -na;
 connectAttr "groupId8.msg" ":initialShadingGroup.gn" -na;
 connectAttr "groupId23.msg" ":initialShadingGroup.gn" -na;
-// End of Lab_11.ma
+// End of Challenge_11.ma
