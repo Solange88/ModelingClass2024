@@ -69,3 +69,7 @@ crashlytics-build.properties
 Unit09_Project/Challenge_09/Challenge_09/sourceimages/BoatScenePainter_Black_BaseColor.png
 
 *.swatches
+
+*.mcx
+
+*.xml
